@@ -11,7 +11,7 @@ def generate_password():
            any(c.isupper() for c in password) and \
            any(c.isdigit() for c in password) and \
            any(c in string.punctuation for c in password) and \
-           not any(word in password.lower() for word in ["słowo1", "słowo2"]):
+           not any(word in password.lower() for word in ["słowo1", "słowo2"]): # wyborażmy sobie ze tu jest słownik z encykolpedii
             return password
 
 password_result = generate_password()
